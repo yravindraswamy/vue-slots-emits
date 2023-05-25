@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    container_name: vue
+    ports:
+      - 4000:3306
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./myconfig/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: vue
+      MYSQL_DATABASE: vue
+      MYSQL_USER: Ravindra
+      MYSQL_PASSWORD: VUE
